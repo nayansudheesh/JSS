@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of vairables</title>
+</head>
+<body>
+    <h2>Scope of vairables</h2>
+    <p>A function can  access  vairables defined inside the button</p>
+    <button type="button" onclick="myfunction()">Click me!</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var a=5
+        function myfunction() {
+            var b=4
+            document.getElementById("demo").innerHTML ="Result is " + a * b;
+        }
+            document.getElementById("demo1").innerHTML = a;
+            document.getElementById("demo1").innerHTML = b;
+    </script>
+</body>
+</html>
