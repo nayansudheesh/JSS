@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object & their properties</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Javascript Objects and it`s propertys</h1>
+    <p>There are two ways to acsess an object`s propertys</p>
+    <p>You can use the <code>.property</code> or <code>["property"]</code> tags</p>
+    <p id="demo"></p>
+<script>
+//object creation
+var person ={
+    firstName: "I",
+    age: 20,
+}
+//Display/output
+document.getElementById("demo").innerHTML = person.firstName + " am " + person.age + " Years old "
+</script>
+</body>
+</html>
