@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 ACP</title>
+</head>
+<body>
+    <h2>Javascript</h2>
+    <p id="demo1"></p>
+    <p>Some  variable commands of Javascript:</p>
+    <p id="demo2"></p>
+    <p>Some document  commands are: </p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        var JS = [
+            "JS is a Coding Language",
+            "JS is a language that is used with HTML and CSS"
+        ]
+        /// join
+    document.getElementById("demo1").innerHTML = JS[2]
+        var C = ["var", "let", "const"]
+                document.getElementById("demo2").innerHTML = C.join("*");
+                /// pop
+        var O = ["document " , " .getElementById " ," .innerHTML", " .Write", " etc" ]
+                document.getElementById("demo3").innerHTML= O; O.pop
+                /// pop2
+                document.getElementById("demo4").innerHTML= O;
+    </script>
+</body>
+</html>
