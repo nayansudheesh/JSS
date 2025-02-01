@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error catching in Javascript</title>
+</head>
+<body>
+    <h2> Error catching</h2>
+    <p> This is an example of error catching and display of error.</p>
+    <p id="error_message"></p>
+    <script>
+        try {
+            erealert("Welcome!")
+        }
+        catch(err){ document.getElementById("error_message").innerHTML = err.message
+    }
+    </script>
+</body>
+</html>
