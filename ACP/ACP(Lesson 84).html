@@ -1,0 +1,23 @@
+<!-- ACP , Lesson 84 , "Print random numbers"-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function generaterandom() {
+        var random = Math.floor(Math.random()*10) + 1
+        document.getElementById("result").innerHTML= random
+    }
+</script>
+<body>
+    <h1>Printing random numbers</h1>
+    <p> Press the button to get a random number between 1 to 10</p>
+    <button onclick="generaterandom()">Click me!</button>
+    <p>The random number is:</p>
+    <p id="result"></p>
+</body>
+</html>
