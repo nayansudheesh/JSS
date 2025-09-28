@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today Calendar</title>
+</head>
+<script>
+    function showTime(){
+        var date = new Date();
+        var d = date.getDate();
+        var mn = date.getMonth() + 1;
+        var monthname = date.getMonth();
+        var y = date.getFullYear();
+        var dayNum = date.getDay();
+        var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        var month = ["january", "febuary" , "March", "april", "may" , "june" , "july", "august" , "september" , "october" , "november",  "december"];
+        var monthname = month[monthname];
+        var dayName = days[dayNum];
+
+    document.getElementById("date").innerHTML = "the date is(in DD/MM/YY format) : " + d + "/" + mn + "/" + y;
+    document.getElementById("day").innerHTML = "the day is " + dayName 
+    document.getElementById("month").innerHTML= "the month is " + monthname
+    document.getElementById("year").innerHTML = "the year is " + y}
+
+    window.onload = showTime;
+</script>
+<body>
+    <h1>Calendar</h1>
+    <p id="date"></p>
+    <p id="day"></p>
+    <p id="month"></p>
+    <p id="year"></p>
+</body>
+</html>
