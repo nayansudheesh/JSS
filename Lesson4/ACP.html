@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACP</title>
+</head>
+<body>
+    <h1> Sum of arguments ACP</h1>
+    <p> sum of arguments and math objects </p>
+    <p id="printp"></p>
+    <p id="trignometry"></p>
+    <script>
+        function sum() {
+            var sum = 0 // initalising sum
+            for (i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById("printp").innerHTML = sum(1, 123, 500, 115, 44, 88)
+        var cos = Math.cos(45)
+        var tan = Math.tan(45)
+        var sin = Math.sin(45)
+    
+       document.getElementById("trignometry").innerHTML = "the cos of 45 is:" + cos + "<br>" + "the tan of 45 is:" + tan + "<br>" + "the sin of 45 is:" + sin + "<br>"
+    </script>
+</body>
+</html>
