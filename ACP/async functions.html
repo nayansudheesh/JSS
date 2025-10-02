@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous functions</title>
+</head>
+<script>
+    async function product(a, b) {
+        let reponse = await new Promise((resolve) => {
+            setTimeout(() => resolve(a * b), 2000);
+        });
+        display(reponse);
+    }
+    function display(some) {
+        document.getElementById("result").innerHTML = some;
+    }
+    product(5, 20);
+</script>
+
+<body>
+    <h3> Asynchronous multiplication in JavaScript </h3>
+    <p id="result"></p>
+</body>
+
+</html>
