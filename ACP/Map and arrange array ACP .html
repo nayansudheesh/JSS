@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array ACP</title>
+</head>
+<style>
+    code{
+         color:rgb(32, 110, 226)
+    }
+</style>
+<script>
+    var numbers = [ 1 , 25 , 12 , 13 , 32]
+    function multiplication(numbers){
+        return numbers * 3
+    }
+    var numbers_mapped = numbers.map(multiplication)
+    function ascending(){
+        numbers_mapped.sort(function(a,b){return(a-b)});
+        document.getElementById("result").innerHTML = "the ascending order of the array is " + numbers_mapped;
+    }
+    var numbers_mapped = numbers.map(multiplication)
+    function descending(){
+        numbers_mapped.sort(function(a,b){return(b-a)});
+        document.getElementById("result").innerHTML = "the descending order of the array is " + numbers_mapped;
+    }
+</script>
+<body>
+    <p> ascending and descending order of numbers mapped to a function to multiply the numbers by 3</p>
+    <p> the array is: <code> var numbers = [ 1 , 25 , 12 , 13 , 32] </code></p><br>
+    <button onclick="ascending()">ascending order of the array</button><br>
+    <br>
+    <button onclick="descending()">ascending order of the array</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>
