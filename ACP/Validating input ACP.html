@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Login Form</title>
+</head>
+
+<body>
+    <h2>Login Form</h2>
+
+    <form onsubmit="return validateForm()">
+        <label> Name</label>
+        <input type="text" id="name"><br><br>
+        <label>Age</label>
+        <input type="text" id="age" ><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let age = document.getElementById("age").value.trim();
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (age === "" || isNaN(age)) {
+                alert("Please enter a valid age.");
+                return false;
+            }
+
+            // If inputs are valid, do nothing
+            return false; // prevents form submission to stay on page
+        }
+    </script>
+</body>
+
+</html>
