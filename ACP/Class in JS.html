@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            showInfo() {
+                return `Name: ${this.name}, Age: ${this.age}`;
+            }
+
+            static greet() {
+                return "Hello from the static method!";
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, age, grade) {
+                super(name, age);
+                this.grade = grade;
+            }
+
+            showStudent() {
+                return `${this.showInfo()}, Grade: ${this.grade}`;
+            }
+        }
+
+        let s1 = new Student("Nayan", 14, "7th Grade");
+
+        document.write(Person.greet() + "<br>");
+        document.write(s1.showStudent());
+    </script>
+
+</body>
+
+</html>
