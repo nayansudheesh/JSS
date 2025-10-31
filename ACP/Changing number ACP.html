@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Toggle App</title>
+</head>
+
+<body>
+
+    <div id="number">1</div>
+    <button id="toggleBtn">Stop</button>
+
+    <script>
+        let running = true;
+        let currentNumber = 1;
+        const numberElement = document.getElementById('number');
+        const button = document.getElementById('toggleBtn');
+
+        function changeNumber() {
+            if (running) {
+                currentNumber = Math.floor(Math.random() * 10) + 1;
+                numberElement.textContent = currentNumber;
+            }
+        }
+
+        const interval = setInterval(changeNumber, 300);
+
+        button.addEventListener('click', () => {
+            running = !running;
+            button.textContent = running ? 'Stop' : 'Start';
+        });
+    </script>
+
+</body>
+
+</html>
